@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+  --primary-blue: #305bd4;
+  --primary-black: #000000;
+  --second-black: #2d2d2d;
+  --primary-white: #ffffff;
+}
+
+.font-style {
+  font-family: "Red Hat Display", sans-serif !important;
+}
+.text5-light {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--primary-white);
+}
+.text5 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--second-black);
+}
+
+.custom-scrollbar {
+  overflow: auto;
+  scroll-snap-type: y mandatory; /* Enable vertical scrolling snap */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer/Edge */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+}
+
+/* Optionally, you can add snap points for smooth scrolling */
+.custom-scrollbar div {
+  scroll-snap-align: end;
+}
+
+.custom-select .ant-select-selection-placeholder {
+  font-family: var(--font-red-hat);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--second-black);
+}
+
+.rt-SelectTrigger:where(.rt-variant-surface) {
+  box-shadow: none !important;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.resizable-textarea {
+  overflow-y: scroll;
+  box-sizing: border-box;
+}
+
+.custom-scrollbar-2,
+.custom-scrollbar-3 {
+  scrollbar-width: thin;
+  scrollbar-color: #999 transparent;
+}
+
+.custom-scrollbar-2::-webkit-scrollbar,
+.custom-scrollbar-3::-webkit-scrollbar,
+select::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-scrollbar-2::-webkit-scrollbar-thumb,
+select::-webkit-scrollbar-thumb {
+  background-color: #cccccc;
+  border-radius: 2px;
+}
+.custom-scrollbar-3::-webkit-scrollbar-thumb {
+  background-color: #545454;
+  border-radius: 2px;
+}
+.custom-scrollbar-2::-webkit-scrollbar-track,
+.custom-scrollbar-2::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.ellipsis-anim span {
+  opacity: 0;
+  -webkit-animation: ellipsis-dot 1s infinite;
+  animation: ellipsis-dot 1s infinite;
+}
+
+.ellipsis-anim span:nth-child(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.ellipsis-anim span:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+.ellipsis-anim span:nth-child(3) {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+@-webkit-keyframes ellipsis-dot {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes ellipsis-dot {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
